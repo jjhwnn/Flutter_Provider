@@ -68,10 +68,10 @@ class _MyHomePageState extends State<MyHomePage> {
           children: [
             Text(
               '- name: ${context.read<Dog>().name}',
-              style: TextStyle(fontSize: 20.0),
+              style: const TextStyle(fontSize: 20.0),
             ),
-            SizedBox(height: 10.0),
-            BreedAndAge(),
+            const SizedBox(height: 10.0),
+            const BreedAndAge(),
           ],
         ),
       ),
@@ -90,10 +90,10 @@ class BreedAndAge extends StatelessWidget {
       children: [
         Text(
           '- breed: ${context.select<Dog, String>((Dog dog) => dog.breed)}',
-          style: TextStyle(fontSize: 20.0),
+          style: const TextStyle(fontSize: 20.0),
         ),
-        SizedBox(height: 10.0),
-        Age(),
+        const SizedBox(height: 10.0),
+        const Age(),
       ],
     );
   }
@@ -110,22 +110,22 @@ class Age extends StatelessWidget {
       children: [
         Text(
           '- age: ${context.select<Dog, int>((Dog dog) => dog.age)}',
-          style: TextStyle(fontSize: 20.0),
+          style: const TextStyle(fontSize: 20.0),
         ),
-        SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
         Text(
           '- number of babies: ${context.read<int>()}',
-          style: TextStyle(fontSize: 20.0),
+          style: const TextStyle(fontSize: 20.0),
         ),
-        SizedBox(height: 10.0),
+        const SizedBox(height: 10.0),
         Text(
           '- ${context.watch<String>()}',
-          style: TextStyle(fontSize: 20.0),
+          style: const TextStyle(fontSize: 20.0),
         ),
-        SizedBox(height: 20.0),
+        const SizedBox(height: 20.0),
         ElevatedButton(
           onPressed: () => context.read<Dog>().grow(),
-          child: Text(
+          child: const Text(
             'Grow',
             style: TextStyle(fontSize: 20.0),
           ),
